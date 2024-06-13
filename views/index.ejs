@@ -12,30 +12,31 @@
 </head>
 
 <body>
+    
     <h3 class="mt-4">All Chats</h3>
-
+    <div class="content">
     <hr>
     <% for(let chat of chats){ %>
         <div class="chat">
             <p>From:<i>
-                    <%= chat.from %>
+                  <b>  <%= chat.from %></b>
                 </i>
             </p>
             <div class="msg">
                 <p>
-                    <%= chat.msg %>
+                   <%= chat.msg %>
                 </p>
                 <div class="chat-options">
                     <form method="get" action="/chats/<%=chat._id%>/edit">
-                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="submit" class="btn btn-warning">Edit</button>
                     </form>
 
                     <form method="post" action="/chats/<%=chat._id%>?_method=DELETE">
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
 
                     <form method="GET" action="/chats/new">
-                        <button type="button" class="btn btn-success">New Chat</button>
+                        <button type="submit" class="btn btn-success">New Chat</button>
                     </form>
                 </div>
 
@@ -43,7 +44,7 @@
             </div>
 
             <p>Received by:<i>
-                    <%= chat.to %>
+                <b> <%= chat.to %></b>   
                 </i>
             </p>
             <hr />
@@ -58,6 +59,7 @@
 
 
         <%}%>
+    </div>
 </body>
 
 </html>

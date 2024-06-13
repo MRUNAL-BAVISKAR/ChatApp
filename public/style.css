@@ -23,3 +23,9 @@
     display: inline;
     margin-right: 5px; 
 }
+.content {
+    margin-left: 20px; 
+}
+#heading{
+    align-items: center;
+}
