@@ -12,10 +12,16 @@
 </head>
 
 <body>
-    
-    <h3 class="mt-4">All Chats</h3>
-    <div class="content">
+    <div class="inital">
+        <h3 class="mt-4">All Chats</h3>  
+     <form method="GET" action="/chats/new">
+        <button type="submit" class="btn btn-success">New Chat</button>
+    </form>
     <hr>
+    </div>
+    
+    <div class="content">
+
     <% for(let chat of chats){ %>
         <div class="chat">
             <p>From:<i>
@@ -35,9 +41,6 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
 
-                    <form method="GET" action="/chats/new">
-                        <button type="submit" class="btn btn-success">New Chat</button>
-                    </form>
                 </div>
 
 
